@@ -68,3 +68,16 @@ textarea {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
 }
+
+.time-column{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.form-entry{
+    display:flex;
+    justify-content: space-around;
+}
+.form-entry textarea{
+    width:90%;
+}

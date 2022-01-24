@@ -76,3 +76,18 @@ textarea {
 .form-entry textarea{
     width:90%;
 }
+
+/* The color set for when the time is in the past */
+.background-past{
+    background-color: #d3d3d3;
+}
+
+/* The color set for when the time is in the present */
+.background-present{
+    background-color: #ff6961;
+}
+
+/* The color set for when the time is in the future */
+.background-future{
+    background-color: #77dd77;
+}

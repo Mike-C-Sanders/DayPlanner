@@ -7,11 +7,11 @@ var $currentDayEl = $('#currentDay');
 var $button9AM= $('#button-9AM');
 var $text9AM = $('#9AM');
 
+//Other Global Variables
+var textIDArr = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM'];
 
 //displays current day/time at the top of the page
 $currentDayEl.text(today.format("dddd, MMMM Do YYYY"));
-
-//TODO Determine standard business hours
 
 //TODO Time block color code - past, present, or future
 

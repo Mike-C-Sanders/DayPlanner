@@ -69,11 +69,6 @@ textarea {
     transition: all 0.3s ease-in-out;
 }
 
-.time-column{
-    text-align: center;
-    vertical-align: middle;
-}
-
 .form-entry{
     display:flex;
     justify-content: space-around;

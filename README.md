@@ -18,28 +18,28 @@ The application is leveraging local storage, it's recommended to clear your loca
 
 ### To Use
 
-    1. Clear your schedule.
+1. Clear your schedule.
 
-    2. Time blocks will be shown in three colors. If a time is in the past the text area will be gray, if the time block is the current time it will be red, and if the time block is in the future it will be green.
+2. Time blocks will be shown in three colors. If a time is in the past the text area will be gray, if the time block is the current time it will be red, and if the time block is in the future it will be green.
 
-    3. Click the text area and record your entry.
+3. Click the text area and record your entry.
 
-    4. Click the save button to the right.
+4. Click the save button to the right.
 
-    5. Your entry is now saved in local storage. If you need to return to your schedule and check later, it will be there.
+5. Your entry is now saved in local storage. If you need to return to your schedule and check later, it will be there.
 
-    6. At the end of the day clear your schedule.
+6. At the end of the day clear your schedule.
 
 ## Table of Contents
 
-    1. README.md - primary readme file
-    2. index.html - primary html source
-    3. CSS - Folder storing all style sheets
-        a. style.css - primary css file
-    4. Images - Folder storing all images and screenshots
-        a. Application - image showing the starting screen for the applicaiton
-        b. favicon.ico - favicon image of an alarmclock
-        c. InAction - application in use
+1. README.md - primary readme file
+2. index.html - primary html source
+3. CSS - Folder storing all style sheets
+    a. style.css - primary css file
+4. Images - Folder storing all images and screenshots
+    a. Application - image showing the starting screen for the applicaiton
+    b. favicon.ico - favicon image of an alarmclock
+    c. InAction - application in use
 
 ## Libraries Used & Docs
 

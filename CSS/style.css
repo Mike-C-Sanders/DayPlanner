@@ -80,14 +80,17 @@ textarea {
 /* The color set for when the time is in the past */
 .background-past{
     background-color: #d3d3d3;
+    color: black;
 }
 
 /* The color set for when the time is in the present */
 .background-present{
     background-color: #ff6961;
+    color: black;
 }
 
 /* The color set for when the time is in the future */
 .background-future{
     background-color: #77dd77;
+    color: black;
 }

@@ -2,7 +2,7 @@
 var today = moment().local();
 var currentHour = moment().hour();
 
-//jQuery variables
+//Global jQuery variables
 var $currentDayEl = $('#currentDay');
 
 //Other Global Variables
@@ -87,10 +87,10 @@ var getEntry = function(){
     timeArray.forEach(function(i){
         //access the text field ID
         var textID = $('#'+ i);
-        console.log(i);
+
         //using time array as the key for getting items in storage
         var lastEntry = localStorage.getItem(i);
-        console.log(lastEntry);
+
         if(lastEntry !==null){
             textID.val(lastEntry);
         }
@@ -98,9 +98,27 @@ var getEntry = function(){
     })
 }
 
+//Clear your schedule function to clear local storage & The current schedule
+var clearSchedule = function(){
+    var clear = $('#button-clear');
+    clear.on('click', function(){
+        localStorage.clear();
+        clearTextArea();
+    })
+}
+
+//Clear the text area 
+var clearTextArea = function(){
+    timeArray.forEach(function(i){
+        var textID = $('#'+i);
+
+        textID.val('');
+
+    })
+}
+
+// * Main function calls
 createEventListeners();
 getEntry();
-
-
-
-
+timeBlockedColor();
+clearSchedule();

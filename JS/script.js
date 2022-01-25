@@ -39,12 +39,25 @@ var createEventListeners = function(){
     })
 }
 
+//function to get the local storage value for a given text field
+var getEntry = function(){
+    //Loop through all time entry fields 
+    timeArray.forEach(function(i){
+        //access the text field ID
+        var textID = $('#'+ i);
+        console.log(i);
+        //using time array as the key for getting items in storage
+        var lastEntry = localStorage.getItem(i);
+        console.log(lastEntry);
+        if(lastEntry !==null){
+            textID.val(lastEntry);
+        }
 
-var newText = localStorage.getItem('9AM');
-
-$text9AM.val(newText);
+    })
+}
 
 createEventListeners();
+getEntry();
 
 
 

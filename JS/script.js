@@ -12,8 +12,7 @@ var timeArray = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM
 //displays current day/time at the top of the page
 $currentDayEl.text(today.format("dddd, MMMM Do YYYY"));
 
-//TODO Time block color code - past, present, or future
-
+//Time block color code - past, present, or future
 var timeBlockedColor = function(){
     var length = timeArray.length;
     var timeIndex = currentHour - length;
@@ -21,24 +20,49 @@ var timeBlockedColor = function(){
     for(var i = 0; i < length; i++){
         //past
         if(i < timeIndex){
-
+            pastColor(i);
         }
         //present
         else if(i === timeIndex){
-
+            presentColor(i);
         }
         //future
         else{
-
+            futureColor(i);
         }
         
     }
 }
 
+//function to change the text area color to the past background class
 var pastColor = function(index){
     var textID = $("#"+timeArray[index]);
+    //Remove the previous color if there was one
+    textID.removeClass('background-future background-present');
     
+    //add color
+    textID.addClass('background-past')
 }
+//function to change the text area color to the present background class
+var presentColor = function(index){
+    var textID = $("#"+timeArray[index]);
+    //Remove the previous color if there was one
+    textID.removeClass('background-future background-past');
+    
+    //add color
+    textID.addClass('background-present')
+}
+//function to change the text area color to the future background class
+var futureColor = function(index){
+    var textID = $("#"+timeArray[index]);
+    //Remove the previous color if there was one
+    textID.removeClass('background-past background-present');
+
+    //add color
+    textID.addClass('background-future')
+}
+
+
 //function create event listener for each textarea. 
 var createEventListeners = function(){
     //Loop through each time array element and apply event listeners

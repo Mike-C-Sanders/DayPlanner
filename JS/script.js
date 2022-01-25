@@ -4,23 +4,41 @@ var currentHour = moment().hour();
 
 //jQuery variables
 var $currentDayEl = $('#currentDay');
-// var $button9AM= $('#button-9AM');
-var $text9AM = $('#9AM');
 
 //Other Global Variables
 var buttonID = '#button-';
 var timeArray = ['9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM'];
 
-var $button9AM = $(buttonID+timeArray[0]);
 //displays current day/time at the top of the page
 $currentDayEl.text(today.format("dddd, MMMM Do YYYY"));
 
 //TODO Time block color code - past, present, or future
 
 var timeBlockedColor = function(){
-    $text9AM.addClass('background-past');
+    var length = timeArray.length;
+    var timeIndex = currentHour - length;
+
+    for(var i = 0; i < length; i++){
+        //past
+        if(i < timeIndex){
+
+        }
+        //present
+        else if(i === timeIndex){
+
+        }
+        //future
+        else{
+
+        }
+        
+    }
 }
 
+var pastColor = function(index){
+    var textID = $("#"+timeArray[index]);
+    
+}
 //function create event listener for each textarea. 
 var createEventListeners = function(){
     //Loop through each time array element and apply event listeners
